@@ -12,11 +12,11 @@ namespace OPTATIVO_III
     {
 
 
-//---------------------------------------INICIO DE CRUD DE TABLA: CIUDAD---------------------------------------------//
+//----------------------------------------------------INICIO DE CRUD DE TABLA: CIUDAD---------------------------------------------//
         public void Crear_Ciudad()
         {
             SqlConnection sqlConnection;
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=OPTATIVO;Integrated Security=True";
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=OPTATIVO;Integrated Security=True"; //Mi Conexión local
             sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
 
@@ -46,13 +46,7 @@ namespace OPTATIVO_III
             string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=OPTATIVO;Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
-            // if (lista_vacia()==true)
-            //{
-            //Console.WriteLine("No se encuentra ningún dato en la lista");
-            //}
-            //else
-            //{
-            //Retrieve
+
             string displayQuery = "SELECT * FROM Ciudad";
             SqlCommand viewCommand = new SqlCommand(displayQuery, sqlConnection);
             SqlDataReader dataReader = viewCommand.ExecuteReader();
@@ -75,7 +69,7 @@ namespace OPTATIVO_III
             sqlConnection.Open();
 
             int u_id;
-            Console.WriteLine("Enter the id of the entry you want to display");
+            Console.WriteLine("Proporcione un ID para desplegar los datos: ");
             u_id = int.Parse(Console.ReadLine());
             string dissplayQuery = "SELECT * FROM Ciudad WHERE idCiudad = " + u_id + "";
             SqlCommand updateCommand = new SqlCommand(dissplayQuery, sqlConnection);
@@ -93,7 +87,7 @@ namespace OPTATIVO_III
 
             //delete
             int d_id;
-            Console.WriteLine("Enter the id of the entry to be removed");
+            Console.WriteLine("Proporcione un ID para eliminar el registro: ");
             d_id = int.Parse(Console.ReadLine());
             string deleteQuery = "DELETE FROM Ciudad WHERE idCiudad = " + d_id + "";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, sqlConnection);
@@ -112,9 +106,9 @@ namespace OPTATIVO_III
             //update
             string up_name;
             int up_id;
-            Console.WriteLine("Enter the id of the entry to be Updated");
+            Console.WriteLine("Proporcione un ID para realizar la modificación: ");
             up_id = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the name you would like to change");
+            Console.WriteLine("Escriba el nombre nuevo: ");
             up_name = Console.ReadLine();
             string updateQuery = "UPDATE Ciudad SET CiudadNombre = '" + up_name + "' WHERE idCiudad = " + up_id + "";
             SqlCommand updateCommand = new SqlCommand(updateQuery, sqlConnection);
@@ -125,7 +119,7 @@ namespace OPTATIVO_III
         }
 
 
-        //---------------------------------------FIN DE CRUD DE TABLA: CIUDAD---------------------------------------------//
+        //---------------------------------------FIN DE CRUD DE TABLA: CIUDAD---------------------------***------------------//
 
         //---------------------------------------INICIO DE CRUD DE TABLA: PERSONA---------------------------------------------//
         public void Crear_Persona()
@@ -209,7 +203,7 @@ namespace OPTATIVO_III
             sqlConnection.Open();
 
             int u_id;
-            Console.WriteLine("Enter the id of the entry you want to display");
+            Console.WriteLine("Proporcione un ID para desplegar los datos");
             u_id = int.Parse(Console.ReadLine());
             string dissplayQuery = "SELECT * FROM Persona WHERE idPersona = " + u_id + "";
             SqlCommand updateCommand = new SqlCommand(dissplayQuery, sqlConnection);
@@ -227,7 +221,7 @@ namespace OPTATIVO_III
 
             //delete
             int d_id;
-            Console.WriteLine("Enter the id of the entry to be removed");
+            Console.WriteLine("Proporcione un ID para borrar los registros");
             d_id = int.Parse(Console.ReadLine());
             string deleteQuery = "DELETE FROM Persona WHERE idPersona = " + d_id + "";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, sqlConnection);
@@ -254,9 +248,9 @@ namespace OPTATIVO_III
             string up_tel;
             string up_email;
             string up_estado;
-            Console.WriteLine("Enter the id of the entry to be Updated: ");
+            Console.WriteLine("Proporcione un ID nuevo: ");
             up_id = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the name you would like to change: ");
+            Console.WriteLine("Nombre: ");
             up_name = Console.ReadLine();
             Console.WriteLine("Apellido: ");
             up_apellido = Console.ReadLine();
@@ -342,7 +336,7 @@ namespace OPTATIVO_III
             sqlConnection.Open();
 
             int u_id;
-            Console.WriteLine("Enter the id of the entry you want to display");
+            Console.WriteLine("Proporcione un ID para desplegar los datos");
             u_id = int.Parse(Console.ReadLine());
             string dissplayQuery = "SELECT * FROM Cliente WHERE idCliente = " + u_id + "";
             SqlCommand updateCommand = new SqlCommand(dissplayQuery, sqlConnection);
@@ -360,7 +354,7 @@ namespace OPTATIVO_III
 
             //delete
             int d_id;
-            Console.WriteLine("Enter the id of the entry to be removed");
+            Console.WriteLine("Proporcione un ID para eliminar los registros");
             d_id = int.Parse(Console.ReadLine());
             string deleteQuery = "DELETE FROM Cliente WHERE idCliente = " + d_id + "";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, sqlConnection);
@@ -382,7 +376,7 @@ namespace OPTATIVO_III
             string up_calif;
             string up_estado;
  
-            Console.WriteLine("Enter the id of the entry to be Updated: ");
+            Console.WriteLine("Proporcione un ID para la Modificacion: ");
             up_id = int.Parse(Console.ReadLine());
             Console.WriteLine("Id Persona: ");
             up_idp = int.Parse(Console.ReadLine());
@@ -502,7 +496,7 @@ namespace OPTATIVO_III
 
             //delete
             int d_id;
-            Console.WriteLine("Enter the id of the entry to be removed");
+            Console.WriteLine("Proporcione un ID para eliminar los registros: ");
             d_id = int.Parse(Console.ReadLine());
             string deleteQuery = "DELETE FROM Cuentas WHERE idCuenta = " + d_id + "";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, sqlConnection);
@@ -529,7 +523,7 @@ namespace OPTATIVO_III
             decimal up_costo;
             string up_prom;
             string up_moneda;
-            Console.WriteLine("Enter the id of the entry to be Updated: ");
+            Console.WriteLine("Proporcione un ID para Actualizar: ");
             up_id = int.Parse(Console.ReadLine());
             Console.WriteLine("Id cliente nuevo: ");
             up_idc = int.Parse(Console.ReadLine());
@@ -644,7 +638,7 @@ namespace OPTATIVO_III
             sqlConnection.Open();
 
             int u_id;
-            Console.WriteLine("Enter the id of the entry you want to display");
+            Console.WriteLine("Proporcione un ID para desplegar los datos: ");
             u_id = int.Parse(Console.ReadLine());
             string dissplayQuery = "SELECT * FROM Movimientos WHERE idMovimiento = " + u_id + "";
             SqlCommand updateCommand = new SqlCommand(dissplayQuery, sqlConnection);
@@ -662,7 +656,7 @@ namespace OPTATIVO_III
 
             //delete
             int d_id;
-            Console.WriteLine("Enter the id of the entry to be removed");
+            Console.WriteLine("Proporcione un ID para eliminar el registro:");
             d_id = int.Parse(Console.ReadLine());
             string deleteQuery = "DELETE FROM Movimientos WHERE idMovimiento = " + d_id + "";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, sqlConnection);
