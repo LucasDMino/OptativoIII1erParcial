@@ -27,8 +27,8 @@ namespace OPTATIVO_III
             Console.WriteLine("\n");
             Console.WriteLine("-----Menu Principal-----");
             Console.WriteLine("\n");
-            Console.WriteLine("1 [Ciudad]    | 3 [Cliente]");
-            Console.WriteLine("2 [Persona] | 4 [Cuentas]");
+            Console.WriteLine("1 [Ciudad]      | 3 [Cliente]");
+            Console.WriteLine("2 [Persona]     | 4 [Cuentas]");
             Console.WriteLine("5 [Movimientos] | 0 [Salir]               ");
             Console.WriteLine("Seleccione la tabla que desea revisar");
             opcion_menu = Console.ReadLine();
@@ -92,7 +92,7 @@ namespace OPTATIVO_III
             Console.WriteLine("\n");
             Console.WriteLine("1 [Crear registro]    | 3 [Eliminar registro]");
             Console.WriteLine("2 [Lista de Ciudades] | 4 [Modificar Ciudad]");
-            Console.WriteLine("5 [Buscar Ciudad] |0 [Salir]             ");
+            Console.WriteLine("5 [Buscar Ciudad]     |0 [Salir]             ");
             Console.WriteLine("Seleccione una opción");
             opcion_menu = Console.ReadLine();
             seleccion_menu(opcion_menu);
@@ -162,9 +162,9 @@ namespace OPTATIVO_III
             Console.WriteLine("\n");
             Console.WriteLine("-----Menu De Tabla-----");
             Console.WriteLine("\n");
-            Console.WriteLine("1 [Crear registro]    | 3 [Eliminar registro]");
-            Console.WriteLine("2 [Lista de Personas] | 4 [Modificar Persona]");
-            Console.WriteLine("5 [Buscar Persona] |0 [Salir]             ");
+            Console.WriteLine("1 [Crear registro]     | 3 [Eliminar registro]");
+            Console.WriteLine("2 [Lista de Personas]  | 4 [Modificar Persona]");
+            Console.WriteLine("5 [Buscar Persona]     |0 [Salir]             ");
             Console.WriteLine("Seleccione una opción");
             opcion_menu = Console.ReadLine();
             seleccion_menuPersona(opcion_menu);
@@ -237,7 +237,7 @@ namespace OPTATIVO_III
             Console.WriteLine("\n");
             Console.WriteLine("1 [Crear registro]    | 3 [Eliminar registro]");
             Console.WriteLine("2 [Lista de Clientes] | 4 [Modificar Cliente]");
-            Console.WriteLine("5 [Buscar Cliente] |0 [Salir]             ");
+            Console.WriteLine("5 [Buscar Cliente]    |0 [Salir]             ");
             Console.WriteLine("Seleccione una opción");
             opcion_menu = Console.ReadLine();
             seleccion_menuCliente(opcion_menu);
@@ -308,8 +308,8 @@ namespace OPTATIVO_III
             Console.WriteLine("-----Menu De Tabla-----");
             Console.WriteLine("\n");
             Console.WriteLine("1 [Crear registro]    | 3 [Eliminar registro]");
-            Console.WriteLine("2 [Lista de Cuentas] | 4 [Modificar Cuenta]");
-            Console.WriteLine("5 [Buscar Cuenta] |0 [Salir]             ");
+            Console.WriteLine("2 [Lista de Cuentas]  | 4 [Modificar Cuenta]");
+            Console.WriteLine("5 [Buscar Cuenta]     |0 [Salir]             ");
             Console.WriteLine("Seleccione una opción");
             opcion_menu = Console.ReadLine();
             seleccion_menuCuenta(opcion_menu);
@@ -379,9 +379,9 @@ namespace OPTATIVO_III
             Console.WriteLine("\n");
             Console.WriteLine("-----Menu De Tabla-----");
             Console.WriteLine("\n");
-            Console.WriteLine("1 [Crear registro]    | 3 [Eliminar registro]");
+            Console.WriteLine("1 [Crear registro]       | 3 [Eliminar registro]");
             Console.WriteLine("2 [Lista de Movimientos] | 4 [Modificar Movimiento]");
-            Console.WriteLine("5 [Buscar Movimiento] |0 [Salir]             ");
+            Console.WriteLine("5 [Buscar Movimiento]    |0 [Salir]             ");
             Console.WriteLine("Seleccione una opción");
             opcion_menu = Console.ReadLine();
             seleccion_menuMovimiento(opcion_menu);
